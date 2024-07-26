@@ -1,4 +1,4 @@
-name: Lint
+name: update Polarion
 
 on:
   pull_request:
@@ -10,8 +10,17 @@ on:
 
 jobs:
   generate:
-    uses: ichderjens/firstAction@1.0
-    with:
-      project: Mainline_OPB1
-      space: Spezifikation
-      name: gemSpec_TI-M_Basis
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+
+    - name: run Action
+      uses: ichderjens/firstAction/action.yml@1.0
+      with:
+        project: Mainline_OPB2
+  
+    - name: Print Output
+      id: output
+      run: echo "${{ steps.test-action.outputs.time }}"
