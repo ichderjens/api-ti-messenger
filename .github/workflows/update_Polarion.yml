@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: run Action
-      uses: ichderjens/firstAction/action.yml@1.0
+      uses: ichderjens/firstAction/action.yml@main
       with:
         project: Mainline_OPB2
   
