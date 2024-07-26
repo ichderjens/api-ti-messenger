@@ -1,0 +1,17 @@
+name: Lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - tim-epa-fdv
+  workflow_dispatch:
+
+jobs:
+  generate:
+    uses: ichderjens/firstAction@1.0
+    with:
+      project: Mainline_OPB1
+      space: Spezifikation
+      name: gemSpec_TI-M_Basis
