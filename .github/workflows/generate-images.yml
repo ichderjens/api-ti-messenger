@@ -13,8 +13,17 @@ on:
 
 jobs:
   generate:
-    uses: gematik/github-image-actions/.github/workflows/generate-images.yml@0.1.0
-    with:
-      srcdir: src/images
-      outdir: images/generated
-      ref: 0.1.0
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+
+    - name: run Action
+      uses: ichderjens/firstAction/action.yml@v1
+      with:
+        project: Mainline_OPB2
+  
+    - name: Print Output
+      id: output
+      run: echo "${{ steps.test-action.outputs.time }}"
