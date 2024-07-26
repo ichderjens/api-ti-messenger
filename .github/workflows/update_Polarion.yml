@@ -19,7 +19,7 @@ jobs:
     - name: run Action
       uses: ichderjens/firstAction@main
       with:
-        project: Mainline_OPB2
+        project: Mainline_OPB1
   
     - name: Print Output
       id: output
