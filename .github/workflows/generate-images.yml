@@ -3,7 +3,8 @@ name: Generate images
 on:
   push:
     branches:
-    - '**'
+    - main
+    #- '**'
     paths:
     - '.github/workflows/generate-images.yml'
     - 'images/generated/**'
@@ -20,7 +21,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: run Action
-      uses: ichderjens/firstAction/action.yml@v1
+      uses: ichderjens/firstAction/action.yml@v1.0
       with:
         project: Mainline_OPB2
   
